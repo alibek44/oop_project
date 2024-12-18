@@ -27,6 +27,5 @@ public class Main {
         Order IDObj = new Order();
         IDObj.setOrderID(1);
         System.out.println(IDObj.getOrderID());
-
     }
 }
