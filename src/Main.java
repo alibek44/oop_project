@@ -6,26 +6,31 @@ public class Main {
     public static void main(String[] args) {
         Item nameObj = new Item();
         nameObj.setItemName("Hoodie");
-        System.out.println(nameObj.getItemName());
 
         Item priceObj = new Item();
         priceObj.setItemPrice(50);
-        System.out.println(priceObj.getItemPrice());
 
         Item quantityObj = new Item();
         quantityObj.setItemQuantity(3);
-        System.out.println(quantityObj.getItemQuantity());
 
         Customer nameObj2 = new Customer();
         nameObj2.setCName("Alfredo");
-        System.out.println(nameObj2.getCName());
 
         Customer phoneObj = new Customer();
         phoneObj.setCPhone(87007246);
-        System.out.println(phoneObj.getCPhone());
 
         Order IDObj = new Order();
         IDObj.setOrderID(1);
-        System.out.println(IDObj.getOrderID());
+
+        Order statusObj = new Order();
+        statusObj.setOrderStatus("Shipping");
+
+        Order dateObj = new Order();
+        dateObj.setOrderDate("23.01.2025");
+
+        System.out.println("Customer Info: "+nameObj2.getCName() + "/ Customer phone: "+phoneObj.getCPhone());
+        System.out.println("Order ID: "+IDObj.getOrderID() + "/ Order Status: " + statusObj.getOrderStatus() + "/ Order Date: " + dateObj.getOrderDate());
+        System.out.println("Item Name: "+nameObj.getItemName()+ "/ Item price: "+priceObj.getItemPrice()+ "/ Quantity: "+quantityObj.getItemQuantity());
     }
+
 }
