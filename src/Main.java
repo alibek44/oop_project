@@ -3,15 +3,9 @@ import Classes.Customer;
 import Classes.Order;
 
 public class Main {
+
     public static void main(String[] args) {
-        Item nameObj = new Item();
-        nameObj.setItemName("Hoodie");
-
-        Item priceObj = new Item();
-        priceObj.setItemPrice(50);
-
-        Item quantityObj = new Item();
-        quantityObj.setItemQuantity(3);
+        Item item = new Item("Hoodie", 20000, 5);
 
         Customer nameObj2 = new Customer();
         nameObj2.setCName("Alfredo");
@@ -30,7 +24,7 @@ public class Main {
 
         System.out.println("Customer Info: "+nameObj2.getCName() + "/ Customer phone: "+phoneObj.getCPhone());
         System.out.println("Order ID: "+IDObj.getOrderID() + "/ Order Status: " + statusObj.getOrderStatus() + "/ Order Date: " + dateObj.getOrderDate());
-        System.out.println("Item Name: "+nameObj.getItemName()+ "/ Item price: "+priceObj.getItemPrice()+ "/ Quantity: "+quantityObj.getItemQuantity());
+        System.out.println("Item Name: "+item.getItemName()+ "/ Item price: "+item.getItemPrice()+ "/ Quantity: "+item.getItemQuantity());
     }
 
 }

@@ -5,24 +5,22 @@ public class Item {
     private int itemPrice;
     private int itemQuantity;
 
+    public Item(String itemName, int itemPrice, int itemQuantity) {
+        this.itemName = itemName;
+        this.itemPrice = itemPrice;
+        this.itemQuantity = itemQuantity;
+    }
+
+
     public String getItemName() {
         return itemName;
-    }
-    public void setItemName(String name) {
-        this.itemName = name;
     }
 
     public int getItemPrice() {
         return itemPrice;
     }
-    public void setItemPrice(int price) {
-        this.itemPrice = price;
-    }
 
     public int getItemQuantity() {
         return itemQuantity;
-    }
-    public void setItemQuantity(int quantity){
-        this.itemQuantity = quantity;
     }
 }
