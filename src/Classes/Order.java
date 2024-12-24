@@ -1,9 +1,9 @@
 package Classes;
 
 public class Order {
-    int orderID;
-    String orderStatus;
-    String orderDate;
+    private int orderID;
+    private String orderStatus;
+    private String orderDate;
 
     public int getOrderID(){
         return orderID;

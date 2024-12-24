@@ -1,8 +1,8 @@
 package Classes;
 
 public class Customer {
-    String cName;
-    int cPhone;
+    private String cName;
+    private int cPhone;
 
     public String getCName(){
         return cName;

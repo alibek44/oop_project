@@ -11,7 +11,6 @@ public class Item {
         this.itemQuantity = itemQuantity;
     }
 
-
     public String getItemName() {
         return itemName;
     }
