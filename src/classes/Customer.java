@@ -1,6 +1,8 @@
-package Classes;
+package classes;
 
 public class Customer {
+    public Customer() {}
+
     private String cName;
     private int cPhone;
 

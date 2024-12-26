@@ -1,12 +1,11 @@
-import Classes.Item;
-import Classes.Customer;
-import Classes.Order;
+import classes.Item;
+import classes.Customer;
+import classes.Order;
 
 public class Main {
 
     public static void main(String[] args) {
         Item item = new Item("Hoodie", 20000, 5);
-
         Customer nameObj2 = new Customer();
         nameObj2.setCName("Alfredo");
 

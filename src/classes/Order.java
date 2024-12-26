@@ -1,6 +1,8 @@
-package Classes;
+package classes;
 
 public class Order {
+    public Order() {}
+
     private int orderID;
     private String orderStatus;
     private String orderDate;
