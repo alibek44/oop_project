@@ -2,28 +2,52 @@ import classes.Item;
 import classes.Customer;
 import classes.Order;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Main {
-
     public static void main(String[] args) {
-        Item item = new Item("Hoodie", 20000, 5);
-        Customer nameObj2 = new Customer();
-        nameObj2.setCName("Alfredo");
+        // Items
+        List<Item> items = new ArrayList<>();
+        items.add(new Item("Hoodie", 20000, 5));
+        items.add(new Item("T-Shirt", 15000, 3));
+        items.add(new Item("Jeans", 40000, 2));
 
-        Customer phoneObj = new Customer();
-        phoneObj.setCPhone(87007246);
+        // Customer
+        Customer customer = new Customer("Alfredo", 87007246);
 
-        Order IDObj = new Order();
-        IDObj.setOrderID(1);
+        // Orders
+        List<Order> orders = new ArrayList<>();
+        orders.add(new Order(1, "Shipping", "23.01.2025"));
+        orders.add(new Order(2, "Delivered", "20.01.2025"));
 
-        Order statusObj = new Order();
-        statusObj.setOrderStatus("Shipping");
+        // Display customer information
+        System.out.println(customer);
 
-        Order dateObj = new Order();
-        dateObj.setOrderDate("23.01.2025");
+        // Display all orders
+        orders.forEach(System.out::println);
 
-        System.out.println("Customer Info: "+nameObj2.getCName() + "/ Customer phone: "+phoneObj.getCPhone());
-        System.out.println("Order ID: "+IDObj.getOrderID() + "/ Order Status: " + statusObj.getOrderStatus() + "/ Order Date: " + dateObj.getOrderDate());
-        System.out.println("Item Name: "+item.getItemName()+ "/ Item price: "+item.getItemPrice()+ "/ Quantity: "+item.getItemQuantity());
+        // Sorting items by price
+        List<Item> sortedItems = items.stream()
+                .sorted((i1, i2) -> Integer.compare(i1.getItemPrice(), i2.getItemPrice()))
+                .collect(Collectors.toList());
+        System.out.println("\nSorted Items by Price:");
+        sortedItems.forEach(System.out::println);
+
+        // Filter items with quantity > 2
+        List<Item> filteredItems = items.stream()
+                .filter(item -> item.getItemQuantity() > 2)
+                .collect(Collectors.toList());
+        System.out.println("\nFiltered Items (Quantity > 2):");
+        filteredItems.forEach(System.out::println);
+
+        // Search for an item by name
+        String searchName = "Jeans";
+        List<Item> searchResult = items.stream()
+                .filter(item -> item.getItemName().equalsIgnoreCase(searchName))
+                .collect(Collectors.toList());
+        System.out.println("\nSearch Result for '" + searchName + "':");
+        searchResult.forEach(System.out::println);
     }
-
 }
