@@ -55,7 +55,6 @@ public class Order {
                 Objects.equals(orderStatus, order.orderStatus) &&
                 Objects.equals(orderDate, order.orderDate);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(orderID, orderStatus, orderDate);
