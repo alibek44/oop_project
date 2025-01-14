@@ -3,6 +3,7 @@ package classes;
 import java.util.Objects;
 
 public class Item {
+    public Item(){}
     private String itemName;
     private int itemPrice;
     private int itemQuantity;

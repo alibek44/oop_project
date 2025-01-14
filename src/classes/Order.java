@@ -3,6 +3,7 @@ package classes;
 import java.util.Objects;
 
 public class Order {
+    public Order() {}
     private int orderID;
     private String orderStatus;
     private String orderDate;
