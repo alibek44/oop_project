@@ -2,14 +2,17 @@ package classes;
 
 public class TopItem extends Item {
     public TopItem(){}
-    private String size;
-    private String fit;
 
     public TopItem(String itemName, int itemPrice, int itemQuantity, String size, String fit) {
         super(itemName, itemPrice, itemQuantity);
         this.size = size;
         this.fit = fit;
     }
+
+    private String size;
+    private String fit;
+
+
     public String getSize() {
         return size;
     }

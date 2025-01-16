@@ -2,9 +2,6 @@ package classes;
 
 public class BottomItem extends Item {
     public BottomItem() {}
-    private String material;
-    private String fitment;
-    private int waistSize;
 
     public BottomItem(String itemName, int itemPrice, int itemQuantity, String material, String fitment, int waistSize) {
         super(itemName, itemPrice, itemQuantity);
@@ -12,6 +9,11 @@ public class BottomItem extends Item {
         this.fitment = fitment;
         this.waistSize = waistSize;
     }
+
+    private String material;
+    private String fitment;
+    private int waistSize;
+
     public String getMaterial() {
         return material;
     }

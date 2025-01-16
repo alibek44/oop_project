@@ -4,13 +4,15 @@ import java.util.Objects;
 
 public class Customer {
     public Customer() {}
-    private String cName;
-    private int cPhone;
 
     public Customer(String cName, int cPhone) {
         this.cName = cName;
         this.cPhone = cPhone;
     }
+
+    private String cName;
+    private int cPhone;
+
 
     public String getCName() {
         return cName;

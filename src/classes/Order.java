@@ -4,15 +4,17 @@ import java.util.Objects;
 
 public class Order {
     public Order() {}
-    private int orderID;
-    private String orderStatus;
-    private String orderDate;
 
     public Order(int orderID, String orderStatus, String orderDate) {
         this.orderID = orderID;
         this.orderStatus = orderStatus;
         this.orderDate = orderDate;
     }
+
+    private int orderID;
+    private String orderStatus;
+    private String orderDate;
+
 
     public int getOrderID() {
         return orderID;

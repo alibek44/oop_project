@@ -4,15 +4,16 @@ import java.util.Objects;
 
 public class Item {
     public Item(){}
-    private String itemName;
-    private int itemPrice;
-    private int itemQuantity;
 
     public Item(String itemName, int itemPrice, int itemQuantity) {
         this.itemName = itemName;
         this.itemPrice = itemPrice;
         this.itemQuantity = itemQuantity;
     }
+
+    private String itemName;
+    private int itemPrice;
+    private int itemQuantity;
 
     public String getItemName() {
         return itemName;
