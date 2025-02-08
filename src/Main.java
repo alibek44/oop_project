@@ -1,13 +1,24 @@
 import classes.*;
 
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
+        DbFunctions db = new DbFunctions();
+        Connection conn = db.connect_to_db("OOP project", "alibek", "20alibek07");
+        //db.insert_data_items(conn, "items", "Sweater", 34990, 2);
+        //db.read_data_items(conn, "items");
+        //db.insert_data_orders(conn, "orders", "Delivered", "23.01.2025", 2);
+        //db.read_data_orders(conn, "orders");
+        //db.insert_data(conn, "customers", "Sanchez", 8707887, 2);
+        //db.read_data(conn, "customers");
 
-        // Items
+
+
+        /*
         List<BottomItem> bottomItems = new ArrayList<>();
         bottomItems.add(new BottomItem("Jeans", 49000, 5,"Raw jeans", "strait", 40));
         bottomItems.add(new BottomItem("Shorts", 22000, 3, "linen", "regular", 44));
@@ -60,7 +71,7 @@ public class Main {
         filteredTop.forEach(System.out::println);
 
         // Search for an item by name
-        String searchName = "Jeans";
+        String searchName = "Trousers";
         List<BottomItem> searchResult = bottomItems.stream()
                 .filter(item -> item.getItemName().equalsIgnoreCase(searchName))
                 .collect(Collectors.toList());
@@ -73,5 +84,7 @@ public class Main {
                 .collect(Collectors.toList());
         System.out.println("\nSearch Result for '" + searchName2 + "':");
         searchResult2.forEach(System.out::println);
+
+         */
     }
 }
